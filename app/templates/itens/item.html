@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Carro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/item/item.css') }}">
+</head>
+<body>
+    <div class="img">
+        <button onclick="moverEsquerda(this)" class="e btn">&#171</button>
+        <img id="foto_item" 
+            style="width: auto; height: 400px; border-radius: 20px;"
+            src="{{ item.fotos[0] }}" 
+            data-fotos='{{ item.fotos|tojson|safe }}' 
+            alt="">
+        <button onclick="moverDireita(this)" class="d btn">&#187</button>
+    </div>
+    <div class="header">
+        <h1>Detalhes {{ item.marca }} {{ item.modelo }}</h1>
+    </div>
+    <div class="container">
+        <div class="card">
+            <p><strong>Ano:</strong> {{ item.ano }}</p>
+            <p><strong>Motor:</strong> {{ item.motor }}</p>
+            <p><strong>Direção:</strong> {{ item.direcao }}</p>
+            <p><strong>Cambio:</strong> {{ item.cambio }}</p>
+            <p id="valor"><strong>Preço:</strong> R$ {{ item.valor }}</p>
+            <p style="margin-bottom: 50px;"><strong>Descrição:</strong> {{ item.desc }}</p>
+            <a href="{{ url_for('resposta') }}" class="button">Voltar para a Lista</a>
+        </div>
+    </div>
+
+    <script src="{{url_for('static', filename = 'js/global/global.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/item/item.js')}}"></script>
+
+</body>
+</html>

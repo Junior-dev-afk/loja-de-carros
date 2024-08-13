@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/global/global.css">
+    <link rel="stylesheet" href="../../static/css/adicionar/adicionar.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <input onchange="adicionarImagem()" type="file" id="imagem" name="imagem" accept="image/*">
+
+    <button class="enviar">Enviar</button>
+    <button onclick="global.adicionarFotoAoPost()" class="adicionar_foto"><img src="../../static/icones/addFoto.png" alt=""></button>
+    <button onclick="verImagens()" class="pilha-fotos"><img style="width: 30px; height: 30px;" src="../../static/icones/pilha-fotos.png" alt=""></button>
+
+    <div class="container"></div>
+
+    <div class="container-mostrar-fotos"></div>
+
+    <script src="../../static/js/pesquisa/criadorElementos.js"></script>
+    <script src="../../static/js/global/global.js"></script>
+    <script src="../../static/js/adicionar/adicionar.js"></script>
+
+</body>
+</html>

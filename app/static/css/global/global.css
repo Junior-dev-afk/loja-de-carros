@@ -1,0 +1,13 @@
+:root{
+    --primari-color: rgb(112, 112, 112);
+    --secundari-color: rgb(172, 172, 172);
+}
+
+body{
+    width: 100vw;
+    height: 100dvh;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: var(--primari-color);
+}
